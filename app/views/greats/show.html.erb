@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @great.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @great.content %>
+</p>
+
+<%= link_to 'Edit', edit_great_path(@great) %> |
+<%= link_to 'Back', greats_path %>

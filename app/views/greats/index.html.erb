@@ -1,0 +1,27 @@
+<h1>Listing greats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @greats.each do |great| %>
+      <tr>
+        <td><%= great.name %></td>
+        <td><%= great.content %></td>
+        <td><%= link_to 'Show', great %></td>
+        <td><%= link_to 'Edit', edit_great_path(great) %></td>
+        <td><%= link_to 'Destroy', great, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Great', new_great_path %>
